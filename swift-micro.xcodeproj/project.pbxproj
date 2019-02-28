@@ -21,7 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_22 /* swift_micro.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* swift_micro.swift */; };
+		E522518B222847E10046864D /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5225181222847E10046864D /* Server.swift */; };
+		E522518C222847E10046864D /* ServerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5225182222847E10046864D /* ServerOptions.swift */; };
+		E522518D222847E10046864D /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5225187222847E10046864D /* Error.swift */; };
+		E522518E222847E10046864D /* swift_micro.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522518A222847E10046864D /* swift_micro.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* XCTestManifests.swift */; };
 		OBJ_41 /* swift_microTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* swift_microTests.swift */; };
@@ -46,12 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E5225181222847E10046864D /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		E5225182222847E10046864D /* ServerOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerOptions.swift; sourceTree = "<group>"; };
+		E5225187222847E10046864D /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		E522518A222847E10046864D /* swift_micro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swift_micro.swift; sourceTree = "<group>"; };
 		OBJ_12 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* swift_microTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_microTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* swift_micro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_micro.swift; sourceTree = "<group>"; };
 		"swift-micro::swift-micro::Product" /* swift_micro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = swift_micro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"swift-micro::swift-microTests::Product" /* swift_microTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = swift_microTests.xctest; path = "swift-microTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		"swift-micro::swift-microTests::Product" /* swift-microTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = "swift-microTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,46 +79,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E522517322283D950046864D /* Client */ = {
+		E5225180222847E10046864D /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				E5225181222847E10046864D /* Server.swift */,
+				E5225182222847E10046864D /* ServerOptions.swift */,
 			);
-			path = Client;
+			name = Server;
+			path = Sources/Server;
 			sourceTree = "<group>";
 		};
-		E522517422283DB60046864D /* Server */ = {
+		E5225183222847E10046864D /* Codec */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Server;
+			name = Codec;
+			path = Sources/Codec;
 			sourceTree = "<group>";
 		};
-		E522517522283DD60046864D /* Registry  */ = {
+		E5225184222847E10046864D /* Transport */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Registry ";
+			name = Transport;
+			path = Sources/Transport;
 			sourceTree = "<group>";
 		};
-		E522517622283E040046864D /* Transport */ = {
+		E5225185222847E10046864D /* Selector */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Transport;
+			name = Selector;
+			path = Sources/Selector;
 			sourceTree = "<group>";
 		};
-		E522517722283E0E0046864D /* Selector */ = {
+		E5225186222847E10046864D /* Error */ = {
 			isa = PBXGroup;
 			children = (
+				E5225187222847E10046864D /* Error.swift */,
 			);
-			path = Selector;
+			name = Error;
+			path = Sources/Error;
 			sourceTree = "<group>";
 		};
-		E522517822283E180046864D /* Codec */ = {
+		E5225188222847E10046864D /* Client */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Codec;
+			name = Client;
+			path = Sources/Client;
+			sourceTree = "<group>";
+		};
+		E5225189222847E10046864D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E522518A222847E10046864D /* swift_micro.swift */,
+			);
+			name = Service;
+			path = Sources/Service;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -137,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				"swift-micro::swift-micro::Product" /* swift_micro.framework */,
-				"swift-micro::swift-microTests::Product" /* swift_microTests.xctest */,
+				"swift-micro::swift-microTests::Product" /* swift-microTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -156,24 +180,15 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E522517822283E180046864D /* Codec */,
-				E522517722283E0E0046864D /* Selector */,
-				E522517622283E040046864D /* Transport */,
-				E522517522283DD60046864D /* Registry  */,
-				E522517422283DB60046864D /* Server */,
-				E522517322283D950046864D /* Client */,
-				OBJ_8 /* swift-micro */,
+				E5225188222847E10046864D /* Client */,
+				E5225183222847E10046864D /* Codec */,
+				E5225186222847E10046864D /* Error */,
+				E5225185222847E10046864D /* Selector */,
+				E5225180222847E10046864D /* Server */,
+				E5225189222847E10046864D /* Service */,
+				E5225184222847E10046864D /* Transport */,
 			);
 			name = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_8 /* swift-micro */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_9 /* swift_micro.swift */,
-			);
-			name = "swift-micro";
-			path = "Sources/swift-micro";
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -223,7 +238,7 @@
 			);
 			name = "swift-microTests";
 			productName = swift_microTests;
-			productReference = "swift-micro::swift-microTests::Product" /* swift_microTests.xctest */;
+			productReference = "swift-micro::swift-microTests::Product" /* swift-microTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_22 /* swift_micro.swift in Sources */,
+				E522518B222847E10046864D /* Server.swift in Sources */,
+				E522518D222847E10046864D /* Error.swift in Sources */,
+				E522518E222847E10046864D /* swift_micro.swift in Sources */,
+				E522518C222847E10046864D /* ServerOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +421,7 @@
 		OBJ_37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -424,6 +443,7 @@
 		OBJ_38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
