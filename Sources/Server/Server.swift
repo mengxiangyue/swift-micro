@@ -24,6 +24,10 @@ public protocol Request {
     var body: Any { get set}
     
     func read() -> (Data, Error)
-    
-
 }
+
+public protocol Response {
+    
+}
+
+
